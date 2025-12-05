@@ -24,7 +24,7 @@ function verificarChute() {
     if(chute == numeroSecreto) { 
             exibirTextoNaTela('h1', 'acertou');
             let palavraTentativa = tentativas > 1 ? 'tries' : 'try';
-            let mensagemTentativas = `You discovered the secret number ${tentativas} ${palavraTentativa}`;
+            let mensagemTentativas = `You discovered the secret number with ${tentativas} ${palavraTentativa}`;
             exibirTextoNaTela('p', mensagemTentativas);
             document.getElementById('reiniciar').removeAttribute('disabled');
             console.log('esta funcionando')
@@ -69,6 +69,7 @@ function reiniciarJogo() {
     exibirMensagemInicial();
     document.getElementById('reiniciar').setAttribute('disabled', true);
 }
+
 
 
 
