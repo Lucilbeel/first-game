@@ -11,7 +11,7 @@ function exibirTextoNaTela(tag, texto) {
 }
 
 function exibirMensagemInicial() {
-    exibirTextoNaTela('h1', 'numero secreto');
+    exibirTextoNaTela('h1', 'secret number');
     exibirTextoNaTela('p',`Choose a number between 1 and ${numeroMaximo}`);
 }
 
@@ -69,4 +69,5 @@ function reiniciarJogo() {
     exibirMensagemInicial();
     document.getElementById('reiniciar').setAttribute('disabled', true);
 }
+
 
