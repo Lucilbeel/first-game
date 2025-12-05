@@ -1,5 +1,5 @@
 let listaNumerosAleatorios = [];
-let numeroLimite = numeroMaximo;
+let numeroLimite = 50;
 let numeroSecreto = numeroAleatorio();
 let tentativas = 1;
 let numeroMaximo = 50;
@@ -69,6 +69,7 @@ function reiniciarJogo() {
     exibirMensagemInicial();
     document.getElementById('reiniciar').setAttribute('disabled', true);
 }
+
 
 
 
