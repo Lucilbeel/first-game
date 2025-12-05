@@ -2,7 +2,7 @@ let listaNumerosAleatorios = [];
 let numeroLimite = 10;
 let numeroSecreto = numeroAleatorio();
 let tentativas = 1;
-let numeroMaximo = 10;
+let numeroMaximo = 50;
 
 function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
@@ -11,8 +11,8 @@ function exibirTextoNaTela(tag, texto) {
 }
 
 function exibirMensagemInicial() {
-    exibirTextoNaTela('h1', 'resenha secreta');
-    exibirTextoNaTela('p',`escolha uma resenha de 1 a ${numeroMaximo}`);
+    exibirTextoNaTela('h1', 'numero secreto');
+    exibirTextoNaTela('p',`Choose a number between 1 and ${numeroMaximo}`);
 }
 
 exibirMensagemInicial();
@@ -24,16 +24,16 @@ function verificarChute() {
     if(chute == numeroSecreto) { 
             exibirTextoNaTela('h1', 'acertou');
             let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
-            let mensagemTentativas = `Voce descobriu o numero secreto com ${tentativas} ${palavraTentativa}`;
+            let mensagemTentativas = `You discovered the secret number ${tentativas} ${palavraTentativa}`;
             exibirTextoNaTela('p', mensagemTentativas);
             document.getElementById('reiniciar').removeAttribute('disabled');
             console.log('esta funcionando')
     } else {
         if (chute < numeroSecreto) {
-            exibirTextoNaTela('p', `o numero secreto é maior que ${chute}`);
+            exibirTextoNaTela('p', `the secret number is bigger than ${chute}`);
         }
         else {
-            exibirTextoNaTela('p', `o numero secreto é menor que ${chute}`);
+            exibirTextoNaTela('p', `the secret number is minor than ${chute}`);
         } tentativas++;
         limparCampo();  
     }
@@ -69,3 +69,4 @@ function reiniciarJogo() {
     exibirMensagemInicial();
     document.getElementById('reiniciar').setAttribute('disabled', true);
 }
+
